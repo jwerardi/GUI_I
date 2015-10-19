@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!--
+Webpage Author: James Walter Erardi
+jerardi@cs.uml.edu
+UMass Lowell
+91.461 GUI Programming I
+10/5/2015
+Assignment 5 demonstrating some cool JavaScript
+Copyright (c) 2015 by James Walter Erardi. All rights reserved.
+-->
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/multicss.css"/>
+    <meta charset="UTF-8">
+    <title>Assignment #6</title>
+    <!--
+           load jQuery library from the Google Content Delivery Network (CDN)
+           see http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
+           however, note that you obviously must be online for this to work
+           alternatively, you can download jQuery and store it locally from
+              http://jquery.com/download/
+         -->
+
+    <!-- load the JSON file containing your text -->
+    <script type="text/javascript">
+            function myMultiplicationTable() {
+                //read in information from the html form, assign them to unique variables
+                var one = document.getElementById('firstnum').value;
+                var two = document.getElementById('secondnum').value;
+                var three = document.getElementById('thirdnum').value;
+                var four = document.getElementById('fourthnum').value;
+                //for loop counters
+                var i;
+                var j;
+                //string which all html content will be placed into
+                var string = "";
+                //array containing all of the user entered numbers, array for easy iteration
+                var array = [one, two, three, four];
+                //if/else loop which ensures error proof
+                if(!isNaN(one) & !isNaN(two) & !isNaN(three) & !isNaN(four)){
+
+
+                    //filling the string which we'll pass back to the HTML with HTML tags
+                    string = string + "<br>";
+                    string = string + "<table>";
+                    string = string + "<th>" + "☻" + "</th>";
+                    //first for loop creates the first row of the table with the multipliers
+                    for(i = 0; i < array.length; i++) {
+                        string = string + "<th>" + array[i] + "</th>";
+
+                    }
+
+                    //this for loop creates the multiplication results table contents, along with the columns
+                    for(i = 0; i < array.length; i++){
+                        string = string + "<tr>";
+                        //column creation for multiplicands
+                        string = string + "<th>" + array[i] + "</th>";
+                        for(j = 0; j < array.length; j++){
+                            //result of multiplication string
+                            string = string + "<th>" + array[i] * array[j] + "</th>";
+                        }
+                        //ends the table row
+                        string = string + "</tr>";
+                    }
+                    //ends the table
+                    string = string + "</table>";
+                    //plants all of this string into content1 tag
+                    document.getElementById('content1').innerHTML = string;
+            }else{
+                //else statement which will run when the user inputs bologna
+                var string3 = "Please enter numerical inputs only.";
+                    document.getElementById('content1').innerHTML = string3;
+
+
+                }
+            }
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+<!--
+Partial menu CSS sourced from
+http://css-plus.com/2010/03/how-to-create-a-simple-horizontal-navigation-menu-from-scratch/
+-->
+<div id="menu">
+    <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Assignments.html">Assignments</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content3">
+<!--
+container for all my webpages content
+-->
+<p id="content">
+
+    <h1>嫌いアニメ</h1>
+
+    <!--
+   Form used for user input for the multiplcation table
+    -->
+    <div id = "content2">
+    <form id="multitable">
+        Enter first number:<br>
+        <input type="text" id="firstnum">
+        <br>
+        Enter second number:<br>
+        <input type="text" id="secondnum">
+        <br>
+        Enter third number:<br>
+        <input type="text" id="thirdnum">
+        <br>
+        Enter fourth number:<br>
+        <input type="text" id="fourthnum">
+        <br><br>
+    </form>
+    <button class="btn-style" onclick="myMultiplicationTable()">Submit</button>
+    </div>
+    <!--
+    Div which displays the javascript generated multiplication table
+    -->
+    <div id = "content1"></div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

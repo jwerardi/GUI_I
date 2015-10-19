@@ -100,25 +100,12 @@ selector for the content of the page. currently, only property is centered conte
     text-align: center;
 
 }
-#content h3{
-    font-family: Courier New;
-    font-size: 100%;
-    text-align: center;
-    padding-bottom: 55px;
-    color: white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-
-}
 
 /*
 selector for the menu, so the menu is stuck to the right
 */
 #menu{
-   text-align: right;
+    text-align: right;
     float: right;
 
 }
@@ -129,7 +116,12 @@ http://css-plus.com/2010/03/how-to-create-a-simple-horizontal-navigation-menu-fr
 * { margin: 0; padding: 0; }
 ul li { float: left; list-style-type: none; }
 ul { display: table; margin: 0 auto; }
-ul li a { font-family: "Roboto-Light" ; background: #ffffff; color: black; display: block; padding: 10px 100px; text-decoration: none;
+ul li a { font-family: "Roboto-Light" ;
+    background: transparent;
+    color: black;
+    display: block;
+    padding: 10px 100px;
+    text-decoration: none;
 }
 ul li a:hover { background: #000000;color: #ffffff }
 

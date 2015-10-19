@@ -1,5 +1,5 @@
 /*
-Webpage Author: James Walter Erardi
+Webpage Author: Jamie Walter Erardi
 jerardi@cs.uml.edu
 UMass Lowell
 91.461 GUI Programming I
@@ -84,27 +84,22 @@ Code to resize webpage for mobile devices
     }
 }
 /*
-No repeat on background cup image so it'll be one, stretched out image.
+css to make me table pretty
 */
 
-body{
-    background-image: url(retro.jpg);
-    background-repeat : no-repeat;
-    background-size: 110%;
-    background-origin: padding-box;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-/*
-selector for the content of the page. currently, only property is centered content
-*/
-#content{
+th, td {
+    padding: 9px;
     text-align: center;
-
-}
-#content h3{
-    font-family: Courier New;
-    font-size: 100%;
-    text-align: center;
-    padding-bottom: 55px;
     color: white;
     text-shadow:
     -1px -1px 0 #000,
@@ -113,14 +108,96 @@ selector for the content of the page. currently, only property is centered conte
     1px 1px 0 #000;
 
 }
+/*
+No repeat on background cup image so it'll be one, stretched out image.
+*/
+
+body{
+    background-repeat : no-repeat;
+    background-size: 75%;
+    background-position : center;
+    background-origin : padding-box;
+}
+/*
+selector for the content of the page. currently, only property is centered content
+*/
+#content{
+    text-align: center;
+
+}
+/*
+Button CSS style supplied by the fine folks at
+http://button.csscook.com/
+*/
+.btn-style{
+    border : solid 0px #ffffff;
+    align-content: center;
+    border-radius : 3px;
+    moz-border-radius : 3px;
+    -webkit-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+    -moz-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+    box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+    font-size : 20px;
+    color : #ffffff;
+    padding : 1px 10px;
+    background : #1d1e1f;
+    background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d1e1f), color-stop(100%,#969da3));
+    background : -moz-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
+    background : -webkit-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
+    background : -o-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
+    background : -ms-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
+    background : linear-gradient(top, #1d1e1f 0%, #969da3 100%);
+    filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1e1f', endColorstr='#969da3',GradientType=0 );
+
+}
 
 /*
 selector for the menu, so the menu is stuck to the right
 */
 #menu{
-   text-align: right;
+    text-align: right;
     float: right;
 
+}
+/*
+Content1 and Content2 are divs used to format my table and form
+*/
+#content3{
+    background-image: url("coolmath.jpg");
+    background-repeat : no-repeat;
+    background-size: 75%;
+    background-position : center;
+    background-origin : padding-box;
+    padding-bottom: 50px;
+}
+#content2{
+    font-family: "Roboto-Light";
+    font-weight: bolder;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    color: white;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+#content1{
+    font-family: "Roboto-Light";
+    font-weight: bolder;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 /*
 Partial menu CSS sourced from
@@ -129,7 +206,12 @@ http://css-plus.com/2010/03/how-to-create-a-simple-horizontal-navigation-menu-fr
 * { margin: 0; padding: 0; }
 ul li { float: left; list-style-type: none; }
 ul { display: table; margin: 0 auto; }
-ul li a { font-family: "Roboto-Light" ; background: #ffffff; color: black; display: block; padding: 10px 100px; text-decoration: none;
+ul li a { font-family: "Roboto-Light" ;
+    background: transparent;
+    color: black;
+    display: block;
+    padding: 10px 100px;
+    text-decoration: none;
 }
 ul li a:hover { background: #000000;color: #ffffff }
 
