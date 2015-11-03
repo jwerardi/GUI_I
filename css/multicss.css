@@ -113,8 +113,9 @@ No repeat on background cup image so it'll be one, stretched out image.
 */
 
 body{
+    background-image: url("einstein.jpg");
     background-repeat : no-repeat;
-    background-size: 75%;
+    background-size: 100%;
     background-position : center;
     background-origin : padding-box;
 }
@@ -133,7 +134,6 @@ http://button.csscook.com/
     border : solid 0px #ffffff;
     align-content: center;
     border-radius : 3px;
-    moz-border-radius : 3px;
     -webkit-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
     -moz-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
     box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
@@ -146,11 +146,21 @@ http://button.csscook.com/
     background : -webkit-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
     background : -o-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
     background : -ms-linear-gradient(top, #1d1e1f 0%, #969da3 100%);
-    background : linear-gradient(top, #1d1e1f 0%, #969da3 100%);
-    filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1e1f', endColorstr='#969da3',GradientType=0 );
-
 }
+/**
+* color label tag which is created by jquery validation errors
+*/
+#output{
+    color:red;
+    font-weight: 900;
+}
+/*
+color invalid input for jquery validation red
+*/
 
+select.error, textarea.error, input.error, output.error {
+    color:#FF0000;
+}
 /*
 selector for the menu, so the menu is stuck to the right
 */
@@ -163,7 +173,6 @@ selector for the menu, so the menu is stuck to the right
 Content1 and Content2 are divs used to format my table and form
 */
 #content3{
-    background-image: url("coolmath.jpg");
     background-repeat : no-repeat;
     background-size: 75%;
     background-position : center;
@@ -192,12 +201,19 @@ Content1 and Content2 are divs used to format my table and form
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
     color: white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+/*
+* Colors the multiplcation table's border white so it's actualy visible over background image
+*/
+table, th, td {
+    border: 1px solid white;
 }
 /*
 Partial menu CSS sourced from
@@ -208,7 +224,7 @@ ul li { float: left; list-style-type: none; }
 ul { display: table; margin: 0 auto; }
 ul li a { font-family: "Roboto-Light" ;
     background: transparent;
-    color: black;
+    color: white;
     display: block;
     padding: 10px 100px;
     text-decoration: none;
