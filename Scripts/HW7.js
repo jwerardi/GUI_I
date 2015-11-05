@@ -12,18 +12,22 @@
         rules: {
             "firstnum": {
                 required: true,
+                maxlength: 5,
                 number : true
             },
             "secondum": {
                 required: true,
+                maxlength: 5,
                 number : true
             },
             "thirdnum": {
                 required: true,
+                maxlength: 5,
                 number : true
             },
             "fourthnum": {
                 required: true,
+                maxlength: 5,
                 number : true
             }
         },
@@ -33,18 +37,22 @@
         messages: {
             "firstnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
+                maxlength: "Please enter no number above 99,999",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "secondum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
+                maxlength: "Please enter no number above 99,999",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "thirdnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
+                maxlength: "Please enter no number above 99,999",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "fourthnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
+                maxlength: "Please enter no number above 99,999",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             }
         }
