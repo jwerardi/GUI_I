@@ -37,22 +37,22 @@
         messages: {
             "firstnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
-                maxlength: "Please enter no number above 99,999",
+                maxlength: "<br><small id=\"output\">Please enter no number greater than 99,999</small>",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "secondum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
-                maxlength: "Please enter no number above 99,999",
+                maxlength: "<br><small id=\"output\">Please enter no number greater than 99,999</small>",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "thirdnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
-                maxlength: "Please enter no number above 99,999",
+                maxlength: "<br><small id=\"output\">Please enter no number greater than 99,999</small>",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             },
             "fourthnum": {
                 required: "<br><small id=\"output\">Please type a number in the box</small>",
-                maxlength: "Please enter no number above 99,999",
+                maxlength: "<br><small id=\"output\">Please enter no number greater than 99,999</small>",
                 number: "<br><small id=\"output\">You must only input a number value in the first box</small>"
             }
         }
