@@ -126,6 +126,7 @@ function myMultiplicationTable() {
 
     }
 }
+<<<<<<< HEAD
 
 
 $(function() {
@@ -317,3 +318,5 @@ $(document).ready(function() {
         $("div#tabs").tabs("refresh");
     });
 });*/
+=======
+>>>>>>> c6617c187b46ad73406410395e28f816ae759cab
