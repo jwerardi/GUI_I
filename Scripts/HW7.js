@@ -128,7 +128,6 @@ function myMultiplicationTable() {
 }
 
 
-
 $(function() {
     $( "#slider-range-min" ).slider({
         range: "min",
@@ -244,16 +243,7 @@ function AddTab(strTable){
 
     $(".tabs").tabs("refresh");
 }
-//remove tab, doesn't really work
-$(function() {
-    $('#removeTab').live('click', function() {
-        var $tabs = $('#tabs').tabs();
-        var selected = $tabs.tabs('option', 'selected');
-        if(selected == -1)
-            selected = $('p[id=removeTab]').index(this);
-        $('#tabs').tabs("remove", [selected]);
-    });
-});
+
 function setToPointVal(){
 
     //updating the slider value when the text box is manipulated
@@ -318,5 +308,3 @@ $(document).ready(function() {
         $("div#tabs").tabs("refresh");
     });
 });*/
-=======
->>>>>>> c6617c187b46ad73406410395e28f816ae759cab
