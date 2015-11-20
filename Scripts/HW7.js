@@ -126,7 +126,7 @@ function myMultiplicationTable() {
 
     }
 }
-<<<<<<< HEAD
+
 
 
 $(function() {
