@@ -1,0 +1,16 @@
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.slider {
+    text-align:center;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    border: 20px solid #FFF;
+    margin-top: 20px;
+}

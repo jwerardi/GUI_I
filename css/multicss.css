@@ -108,16 +108,18 @@ th, td {
     1px 1px 0 #000;
 
 }
+
+.tablink{
+    text-align:center;
+
+}
 /*
 No repeat on background cup image so it'll be one, stretched out image.
 */
 
 body{
-    background-image: url("einstein.jpg");
-    background-repeat : no-repeat;
-    background-size: 100%;
-    background-position : center;
-    background-origin : padding-box;
+    background-color: black;
+
 }
 /*
 selector for the content of the page. currently, only property is centered content
@@ -194,21 +196,28 @@ Content1 and Content2 are divs used to format my table and form
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-#content1{
+div.content1{
     font-family: "Roboto-Light";
     font-weight: bolder;
     width: 200px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     color: white;
+    display: none;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+/*this happens when the corresponding link is clicked*/
+.content1:focus{
+    display: block;
+    position: relative;
+    top: 1px;
+}
+
 /*
 * Colors the multiplcation table's border white so it's actualy visible over background image
 */
@@ -220,16 +229,16 @@ Partial menu CSS sourced from
 http://css-plus.com/2010/03/how-to-create-a-simple-horizontal-navigation-menu-from-scratch/
 */
 * { margin: 0; padding: 0; }
-ul li { float: left; list-style-type: none; }
-ul { display: table; margin: 0 auto; }
-ul li a { font-family: "Roboto-Light" ;
+#menu ul li { float: left; list-style-type: none; }
+#menu ul { display: table; margin: 0 auto; }
+#menu ul li a { font-family: "Roboto-Light" ;
     background: transparent;
     color: white;
     display: block;
     padding: 10px 100px;
     text-decoration: none;
 }
-ul li a:hover { background: #000000;color: #ffffff }
+#menu ul li a:hover { background: #000000;color: #ffffff }
 
 
 /*
@@ -266,3 +275,5 @@ CSS which provides the rainbow text properties over hover. Makes the text wiggle
     -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+

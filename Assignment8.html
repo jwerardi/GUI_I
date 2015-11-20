@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!--
+Webpage Author: James Walter Erardi
+jerardi@cs.uml.edu
+UMass Lowell
+91.461 GUI Programming I
+10/5/2015
+Assignment 5 demonstrating some cool JavaScript
+Copyright (c) 2015 by James Walter Erardi. All rights reserved.
+-->
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/multicss.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css">
+    <meta charset="UTF-8">
+    <title>Assignment #8</title>
+    <!--
+           load jQuery library from the Google Content Delivery Network (CDN)
+           see http://encosia.com/3-reasons-why-you-should-let-google-host-jquery-for-you/
+           however, note that you obviously must be online for this to work
+           alternatively, you can download jQuery and store it locally from
+              http://jquery.com/download/
+         -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!----
+    Javascript function which validates user inputs inside the designated form
+    -->
+    <script src="Scripts/HW7.js"></script>
+
+
+</head>
+<body>
+
+
+<!--
+Partial menu CSS sourced from
+http://css-plus.com/2010/03/how-to-create-a-simple-horizontal-navigation-menu-from-scratch/
+-->
+<div id="menu">
+    <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Assignments.html">Assignments</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<div id="content3">
+    <!--
+    container for all my webpages content
+    -->
+    <p id="content">
+
+    <h1>嫌いアニメ</h1>
+
+    <!--
+   Form used for user input for the multiplcation table
+    -->
+
+
+        <div id = "content2">
+            <form id="multitable">
+
+                <div id="slider-range-min"></div>
+                <label for="firstnum">Enter first number:<br></label>
+                <input class="left" type="text" id="firstnum" name="firstnum" oninput="setToPointVal()">
+                <br>
+                <div id="slider-range-min2"></div>
+                <label for="secondnum"> Enter second number:<br></label>
+                <input class="left" type="text" id="secondnum" name="secondum" oninput="setToPointVal()">
+                <br>
+
+                <div id="slider-range-min3"></div>
+                <label for="thirdnum">Enter third number:<br></label>
+                <input class="left" type="text" id="thirdnum" name="thirdnum" oninput="setToPointVal()">
+                <br>
+                <div id="slider-range-min4"></div>
+                <label for="fourthnum"> Enter fourth number:<br></label>
+                <input class="left" type="text" id="fourthnum" name="fourthnum" oninput="setToPointVal()">
+                <br><br>
+            </form>
+            <button id='add-tab' class="btn-style" onclick="myMultiplicationTable()">Submit</button>
+
+        </div>
+        <!--
+        Div which displays the javascript generated multiplication table
+        -->
+
+    <ul class='tabs'>
+        <li><a href='#tab1'></a></li>
+    </ul>
+
+
+    <div id='tab1'>
+    </div>
+
+    <!--<div class="tabMenu" id="tabs">
+        <div class="content1">
+            <a href='#tab1'></a>
+        </div>
+    </div>-->
+   <!-- <div class="tabMenu" id="tabs">
+        <ul><li><a href='#tab1'>#1</a></li></ul>
+    </div>-->
+
+</div>
+
+
+
+</body>
+</html>
