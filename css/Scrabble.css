@@ -1,0 +1,29 @@
+/**
+ James W Erardi
+ jerardi@cs.uml.edu
+ 91.461 GUI Programming I
+ Assignment:  Scrabble
+ December 4th, 2015
+
+ James Erardi, UMass Lowell Computer Science
+ Copyright (c) 2015 by James W Erardi
+ updated by JWE on December 8th, 2015 at 7:45 PM
+ **/
+
+#board{
+    text-align: center;
+
+}
+#score{
+    display:inline;
+    float:left;
+    font-size: large;
+}
+#word{
+    visibility: hidden;
+}
+#text{
+    display:inline;
+    float:left;
+    font-size: large;
+}
