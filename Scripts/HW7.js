@@ -126,9 +126,8 @@ function myMultiplicationTable() {
 
     }
 }
-<<<<<<< HEAD
 
-
+//following few functions are the functions used to create/manage the jQuery sliders
 $(function() {
     $( "#slider-range-min" ).slider({
         range: "min",
@@ -181,6 +180,9 @@ $(function() {
     $( "#fourthnum" ).val($( "#slider-range-min" ).slider( "value" ) );
 });
 
+// This function was sourced from a stackoverflow link I found while researching
+//http://stackoverflow.com/questions/23892420/javascript-tab-navigation-issue
+//Out of respect for the author, I will leave his original documentation
 // Wait until the DOM has loaded before querying the document
 $(document).ready(function(){
     $('ul.tabs').each(function(){
@@ -220,7 +222,8 @@ $(document).ready(function(){
     });
 });
 
-
+//function which wraps the jQuery add tab function, used so we can easily pass in strTable from the 
+//mymultiplcation() function
 function AddTab(strTable){
     //read in information from the html form, assign them to unique variables so we can label the tab
     var one = document.getElementById('firstnum').value;
@@ -233,27 +236,20 @@ function AddTab(strTable){
     tab = tab + totalTabs;
 
     $(".tabs").tabs();
+    //add the link inside the tab first
     $(".tabs").append(
         "<li><a href=" + "#" + tab + ">" + "<center>" + linkName + "</center>" + "</li>"
     );
 
-
+    //after the appending has happened, add the multiplcation table
     $(".tabs").after(
         "<div class='content1' id=" + "\"" + tab + "\"" + ">" + "<p>" + strTable + "</p>" + "</div>"
     )
 
     $(".tabs").tabs("refresh");
 }
-//remove tab, doesn't really work
-$(function() {
-    $('#removeTab').live('click', function() {
-        var $tabs = $('#tabs').tabs();
-        var selected = $tabs.tabs('option', 'selected');
-        if(selected == -1)
-            selected = $('p[id=removeTab]').index(this);
-        $('#tabs').tabs("remove", [selected]);
-    });
-});
+//this function is the two way binding mechanism which makes it so the slider will move when
+//values are manually inputted into the form
 function setToPointVal(){
 
     //updating the slider value when the text box is manipulated
@@ -262,61 +258,3 @@ function setToPointVal(){
     $("#slider-range-min3").slider('value',document.getElementsByName("thirdnum")[0].value);
     $("#slider-range-min4").slider('value',document.getElementsByName("fourthnum")[0].value);
 }
-/*
-function AddTab(string) {
-    $(function () {
-
-        //string which is passed from mymultiplcationtable()
-        var content = string;
-        //read in information from the html form, assign them to unique variables so we can label the tab
-        var one = document.getElementById('firstnum').value;
-        var two = document.getElementById('secondnum').value;
-        var three = document.getElementById('thirdnum').value;
-        var four = document.getElementById('fourthnum').value;
-        var numbers = one + two + three + four;
-
-        //initialize the tab widgy
-        $("#tabs").tabs();
-        //add content to tab widgy through append
-        $("#tabs").append(
-            //adds in dynamic content
-            "<div id='displayText' class='tablink'><a href='#tab" + one + two + three + four + "'>" + one + 'x' + two + 'x' + three + 'x' + four + "</a>" + "<div class='content1' id='tab + one + two + three + four +'>" + content + "</div>"
-        );
-        //refresh table after content is added for nice display
-        $("div#tabs").tabs("refresh");
-    });
-}*/
-
-//textbook
-/*
-(function($){
-    $("#myTabs").tabs();
-    $("#remove").click(function() {
-        $("#myTabs").tabs("remove", parseInt($("#indexNum").val(),
-            10));
-    });
-    $("#add").click(function() {
-        $("#myTabs").tabs("add", "remoteTab.txt", "A New Tab!");
-    });
-})(jQuery); */
-
-
-
-//gotten from stackoverflow, http://jsfiddle.net/rMGCM/
-/*
-$(document).ready(function() {
-    $("div#tabs").tabs();
-
-    $("button#add-tab").click(function() {
-
-        var num_tabs = $("div#tabs ul li").length+1;
-
-        //$("div#tabs ul").append(
-          //  "<li><a href='#tab" + num_tabs + "'>#" + num_tabs + "</a></li><form id='multitable'><div id='slider-range-min'></div><label for='firstnum'>Enter first number:<br></label> <input type='text' id='firstnum'><br><div id='slider-range-min2'></div> <label for='secondnum'> Enter second number:<br></label> <input class='left' type='text' id='secondnum' name='secondum'><br><div id='slider-range-min3'></div> <label for='thirdnum'>Enter third number:<br></label> <input class='left' type='text' id='thirdnum' name='thirdnum'> <br><div id='slider-range-min4'></div><label for='fourthnum'> Enter fourth number:<br></label><input class='left' type='text' id='fourthnum' name='fourthnum'><br><br></form>"
-      //  );
-
-        $("div#tabs").tabs("refresh");
-    });
-});*/
-=======
->>>>>>> c6617c187b46ad73406410395e28f816ae759cab
